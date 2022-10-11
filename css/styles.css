@@ -31,7 +31,7 @@ p {
 ul {
   padding-left: 0;
 }
-body {
+.page {
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   color: var(--color-text);
@@ -46,17 +46,17 @@ body {
   padding-right: 15px;
 }
 /* Шапка */
-.page-header {
+.header {
   border-bottom: 1px solid #ececec;
 }
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 /* Логотип */
-/* Logo-Nav */
-.logo-nav {
+/* Logo */
+.header__nav {
   display: flex;
 }
 .logo {
@@ -76,15 +76,15 @@ body {
   color: var(--accent-color-text);
 }
 /* меню навігації */
-.site-nav {
+.header__site-nav {
   display: flex;
   align-items: center;
 }
-.contact .item:not(:last-child),
-.site-nav .item:not(:last-child) {
+.header__contact .item:not(:last-child),
+.header__site-nav .item:not(:last-child) {
   margin-right: 50px;
 }
-.text-nav {
+.header__text-nav {
   position: relative;
   text-decoration: none;
   font-weight: 500;
@@ -96,14 +96,14 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.text-nav:hover,
-.text-nav:focus {
+.header__text-nav:hover,
+.header__text-nav:focus {
   color: var(--accent-color-text);
 }
-.site-nav .text-nav.current {
+.header__site-nav .header__text-nav.current {
   color: var(--accent-color-text);
 }
-.text-nav.current::after {
+.header__text-nav.current::after {
   content: '';
   display: block;
   width: 100%;
@@ -114,10 +114,10 @@ body {
   bottom: 0;
 }
 /* Контакти */
-.contact {
+.header__contact {
   display: flex;
 }
-.contact-link {
+.header__link {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -132,13 +132,13 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-link:hover,
-.contact-link:focus {
+.header__link:hover,
+.header__link:focus {
   color: var(--accent-color-text);
   fill: var(--accent-color-text);
 }
 /* Герой */
-.hero-back {
+.hero__back {
   background-color: var(--second-background-color);
 }
 .hero {
@@ -151,7 +151,7 @@ body {
   background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero.jpg');
 }
-.hero-title {
+.hero__title {
   margin-left: auto;
   margin-right: auto;
   width: 696px;
@@ -162,11 +162,11 @@ body {
   color: var(--second-text-color);
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 .button {
   display: block;
   margin: auto;
-  margin-top: 30px;
   cursor: pointer;
   background-color: var(--accent-color-text);
   font-weight: 700;
